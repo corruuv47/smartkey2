@@ -1,5 +1,3 @@
-
-
 function handleCheck() {
     let producto = document.querySelector("#precioProducto");
     let envio = document.getElementById("precioEnvio");
