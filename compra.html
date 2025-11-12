@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartKey | Compra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="SmartKeyLogo.jpg" alt="Logo de la empresa" />
+        <div class="Tituloyeslogan">
+            <h1 id="titulo">SmartKey</h1>
+            <p id="eslogan">Nunca más pierdas lo importante</p>
+        </div>
+    </header>
+
+    <form onsubmit="realizarCompra()">
+        <h1>¡A un paso de ser tuyo!</h1>
+
+        <label>Número de Tarjeta</label>
+        <input type="number" placeholder="XXXX XXXX XXXX XXXX" required>
+
+
+        <label>Código de Seguridad (CVV)</label>
+        <input type="text" placeholder="XXX" maxlength="3">
+
+        <label>Titular de la Tarjeta</label>
+        <input type="text" placeholder="Nombre completo" required>
+
+        <label>Correo Electrónico</label>
+        <input type="email" placeholder="micorreo@correo.com" required>
+
+        <label>Domicilio</label>
+        <input type="text" placeholder="Av. Juan B. Justo 5834" required>
+
+        <label>Fecha de Vencimiento</label>
+        <div id="fechavencimiento">
+            <input class="vencimiento" type="number" min="01" max="12" minlength="2" maxlength="2" placeholder="MM" required>
+            <p id="barrita">/</p>
+            <input class="vencimiento" type="number" min="25" max="40" minlength="2" maxlength="2" placeholder="AA" required>
+        </div>
+
+        <div class="juntar">
+            <label id="stock">Cantidad de productos (0 disponibles)</label>
+            <input id="cantidad" name="cant" value="1" type="number" min="1" oninput="handleCant()" required>
+        </div>
+        
+
+        <div class="domicilio">
+            <input id="check" type="checkbox" onchange="handleCheck()">
+            <label for="check">Enviar a domicilio</label>
+        </div>
+
+
+        <div class="factura">
+            <span>Producto:</span>
+            <span id="precioProducto">7999 ARS</span>
+            </div>
+            <div class="factura">
+            <span>Envío:</span>
+            <span id="precioEnvio">0 ARS</span>
+            </div>
+            <hr>
+            <div class="factura">
+            <span>Total:</span>
+            <span id="total">7999 ARS</span>
+        </div>
+
+
+            <div class="buttons">
+                <button type="button" class="cancelar" onclick="location.href='index.html'">Cancelar</button>
+                <input type="submit" value="Comprar" class="comprar">
+            </div>
+    </form>
+
+    <div id="exito" hidden>
+        <h1>¡Todo Listo!</h1>
+        <p>La compra fue realizada de manera éxitosa. Te hemos mandado el comprobante al email establecido en la compra.</p>
+        <p>Si el pedido irá a su domicilio, llegará en los próximos <strong>dos o tres días</strong>. En caso contrario, retirarlo
+        en nuestra sucursal <strong>Av. Juan B. Justo 5834</strong>, ubicado en el barrio de <strong>Flores, Ciudad Autónoma de Buenos
+        Aires.</strong></p>
+        <p>Recuerde que ante un funcionamiento indebido de nuestro producto o la insatisfacción de la misma, puede solicitar un reembolso
+        o reponer una nueva por una garantía de un plazo de <strong>17 días</strong>. Pasado dicho tiempo, ya no se aceptarán reembolsos
+        o reclamo vía garantía.</p>
+        <p>El recibo fue enviado cordialmente a esta dirección: <strong>unejemplo@ejemplo.com</strong></p>
+        <h3>¡Muchas gracias por comprar nuestro producto!</h3>
+        <button class="volver" onclick="location.href='index.html'">Ir a la página principal</button>
+    </div>
+
+    <footer>
+        <p>SmartKey | © Todos los derechos reservados 2025</p>
+    </footer>
+
+
+</body>
+<script src="main.js"></script>
+</html>

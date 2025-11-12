@@ -1,0 +1,302 @@
+/*
+
+    CODIGO DE CSS.
+
+*/
+
+/* Elementos por default (Sin clases ni id) */
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-image: url("IMG/SmartKey.png");
+background-attachment: fixed;
+backdrop-filter: blur(20px);
+color: #e5e5e5;
+}
+
+header {
+background: #000000;
+color: white;
+padding: 20px;
+display: flex;
+align-items: center;
+gap: 20px;
+justify-content: center;
+text-align: left;
+}
+
+header img {
+width: 80px;
+height: auto;
+}
+
+button {
+padding: 12px 20px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+}
+
+nav {
+background: #111111;
+padding: 10px;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+nav a {
+color: #e5e5e5;
+text-decoration: none;
+font-weight: bold;
+}
+section {
+padding: 40px;
+max-width: 900px;
+margin: auto;
+}
+
+footer {
+background: #000000;
+color: white;
+padding: 20px;
+text-align: center;
+margin-top: 40px;
+}
+
+form {
+max-width: 600px;
+margin: 40px auto;
+background: #2b2b2b;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+h1 {
+text-align: center;
+}
+
+label {
+display: block;
+margin-top: 15px;
+font-weight: bold;
+}
+
+input, select {
+width: 100%;
+padding: 10px;
+border-radius: 6px;
+border: none;
+margin-top: 5px;
+background: #1e1e1e;
+color: #e5e5e5;
+}
+
+/* Elementos con Clase */
+
+.card {
+background: #2b2b2b;
+padding: 20px;
+border-radius: 10px;
+margin-top: 30px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.cta {
+display: inline-block;
+padding: 15px 20px;
+background: #0d6efd;
+color: white;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+}
+
+.anav:hover{
+    color: #0d6efd;
+    transition: 0.2s;
+}
+
+.anav:active{
+    color: #00398d;
+    transition: 0.2s;
+}
+
+.cancelar {
+background: transparent;
+color: rgb(255, 53, 53);
+border: solid 1px rgb(255, 53, 53);
+border-radius: 8px;
+margin-right: 2.5px;
+}
+
+input.comprar {
+background: #0d6efd;
+color: white;
+margin-left: 2.5px;
+padding: 12px 20px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+width: 100px;
+}
+
+.volver {
+background: #ffffff;
+color: rgb(0, 0, 0);
+margin-left: 2.5px;
+padding: 12px 20px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+cursor: pointer;
+width: 100%;
+}
+
+.vencimiento, #cantidad{
+width: 10%;
+border-radius: 6px;
+border: none;
+margin: 5px;
+background: #1e1e1e;
+color: #e5e5e5;
+}
+
+.domicilio {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.domicilio input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.domicilio label {
+    margin: 0;
+    color: #e5e5e5;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.buttons {
+margin-top: 30px;
+display: flex;
+justify-content: end;
+
+}
+
+/* Elementos con Identidad */
+
+#introduccion{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 35px; /* REFERENCIA A LA MEJOR ESCUELA!! */
+    color: rgb(255, 0, 0);
+}
+
+#titulopagina, #subtitulopagina{
+    margin: 0;
+    padding: 0;
+    font-size: 70px
+}
+
+
+#fechavencimiento{
+    display: flex;
+}
+
+#barrita{
+    size: 40px;
+}
+
+#exito {
+max-width: 600px;
+margin: 100px auto;
+background: #61ba40;
+padding: 30px;
+border-radius: 12px;
+box-shadow: 0 2px 10px rgba(0, 255, 68, 0.4);
+font-size:larger;
+}
+
+#sucursal{
+    color: wheat;
+}
+
+/* CARROUSEL */
+
+.carousel {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: background 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
